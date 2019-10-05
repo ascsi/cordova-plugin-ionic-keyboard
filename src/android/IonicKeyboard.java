@@ -40,7 +40,7 @@ public class IonicKeyboard extends CordovaPlugin {
                     if (v == null) {
                         callbackContext.error("No current focus");
                     } else {
-                        inputManager.hideSoftInputFromWindow(v.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                        inputManager.hideSoftInputFromWindow(v.getWindowToken(), 0 );//InputMethodManager.HIDE_NOT_ALWAYS);
                         callbackContext.success(); // Thread-safe.
                     }
                 }
